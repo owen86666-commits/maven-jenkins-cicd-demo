@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     IMAGE_NAME = "theshubhamgour/maven-jenkins-demo"
-    DOCKERHUB_CREDENTIALS = credentials('DockerHub')
+    DOCKERHUB_CREDENTIALS = credentials('5f426de0-80f0-476f-b60f-2043709752df')
   }
 
   stages {
@@ -128,7 +128,13 @@ pipeline {
       echo "❌ Build ${env.BUILD_NUMBER} failed!"
     }
     always {
-      cleanWs()
+     script {
+      if (getContext(hudson.FilePath)) {
+        cleanWs()
+      } else {
+        echo "Workspace context not available, skipping cleanWs."
+      }
+    }
     }
   }
 }
