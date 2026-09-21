@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  tools {
+    maven 'Maven3'  
+  }
+  
   environment {
     IMAGE_NAME = "theshubhamgour/maven-jenkins-demo"
     DOCKERHUB_CREDENTIALS = credentials('5f426de0-80f0-476f-b60f-2043709752df')
