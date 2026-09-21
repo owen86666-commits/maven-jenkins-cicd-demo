@@ -6,7 +6,7 @@ pipeline {
   }
   
   environment {
-    IMAGE_NAME = "theshubhamgour/maven-jenkins-demo"
+    IMAGE_NAME = "owen86666/owen-jenkins"
     DOCKERHUB_CREDENTIALS = credentials('5f426de0-80f0-476f-b60f-2043709752df')
   }
 
