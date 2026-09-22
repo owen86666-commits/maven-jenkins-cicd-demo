@@ -8,6 +8,9 @@ pipeline {
   environment {
     IMAGE_NAME = "owen86666/owen-jenkins"
     DOCKERHUB_CREDENTIALS = credentials('5f426de0-80f0-476f-b60f-2043709752df')
+    HTTP_PROXY = 'http://host.docker.internal:7890'
+    HTTPS_PROXY = 'http://host.docker.internal:7890'
+    NO_PROXY = 'localhost,127.0.0.1'
   }
 
   stages {
