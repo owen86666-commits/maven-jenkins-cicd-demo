@@ -10,7 +10,7 @@ pipeline {
     DOCKERHUB_CREDENTIALS = credentials('5f426de0-80f0-476f-b60f-2043709752df')
     HTTP_PROXY = 'http://host.docker.internal:7897'
     HTTPS_PROXY = 'http://host.docker.internal:7897'
-    NO_PROXY = 'localhost,127.0.0.1'
+    NO_PROXY = 'localhost,127.0.0.1'  // test trigger
   }
 
   stages {
